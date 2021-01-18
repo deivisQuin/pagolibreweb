@@ -19,6 +19,12 @@ input {
   overflow: hidden;
 }
 
+.descripcion{
+  position: absolute;
+  font-size: 1.2rem;
+  color: #4481eb;
+}
+
 .forms-container {
   position: absolute;
   width: 100%;
@@ -55,6 +61,12 @@ form.sign-up-form {
   opacity: 0;
   z-index: 1;
 }
+/*Eliminar prueba*/
+form.claseHistoria {
+  opacity: 0;
+  z-index: 1;
+}
+/*Eliminar fin de prueba*/
 
 form.sign-in-form {
   z-index: 2;
@@ -62,12 +74,12 @@ form.sign-in-form {
 
 .title {
   font-size: 2.2rem;
-  color: #444;
-  margin-bottom: 10px;
+  color: #4481eb;
+  /*margin-bottom: 10px;*/
 }
 
 .input-field {
-  max-width: 380px;
+  max-width: 600px;
   width: 100%;
   background-color: #f0f0f0;
   margin: 10px 0;
@@ -180,6 +192,10 @@ form.sign-in-form {
   transition-delay: 0.4s;
 }
 
+.claseImagenFondo {
+  width: 250%;
+}
+
 .panel {
   display: flex;
   flex-direction: column;
@@ -231,6 +247,13 @@ form.sign-in-form {
   transform: translateX(800px);
 }
 
+/*elkminar inicia prueba*/
+.historia-panel .image,
+.historia-panel .content {
+  transform: translateX(800px);
+}
+/*Eliminar fin de prueba*/
+
 /* ANIMATION */
 
 .container.sign-up-mode:before {
@@ -270,6 +293,58 @@ form.sign-in-form {
   pointer-events: all;
 }
 
+/*Eliminar Se agrega de prueba */
+.container.sign-on-mode:before {
+  transform: translate(100%, -10%);
+  right: 52%;
+}
+
+.container.sign-on-mode .left-panel .image,
+.container.sign-on-mode .left-panel .content {
+  transform: translate(300px, -800px);
+}
+
+.container.sign-on-mode .signin-signup {
+  left: 25%;
+}
+
+.container.sign-on-mode form.sign-up-form {
+  opacity: 0;
+  z-index: 2;
+}
+
+.container.sign-on-mode form.sign-in-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.sign-on-mode form.claseHistoria {
+  opacity: 1;
+  z-index: 2;
+}
+
+.container.sign-on-mode .right-panel .image,
+.container.sign-on-mode .right-panel .content {
+  transform: translate(500%);
+}
+
+.container.sign-on-mode .historia-panel .image,
+.container.sign-on-mode .historia-panel .content {
+  transform: translate(180%, -50%);
+}
+
+.container.sign-on-mode .signin-signup .sign-in-form {
+  transform: translate(500%, 800px);
+}
+
+.container.sign-on-mode .left-panel {
+  pointer-events: none;
+}
+
+.container.sign-on-mode .right-panel {
+  pointer-events: all;
+}
+/*Eliminar fin de prueba*/
 @media (max-width: 870px) {
   .container {
     min-height: 800px;
