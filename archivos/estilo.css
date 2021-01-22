@@ -22,7 +22,8 @@ input {
 .descripcion{
   position: absolute;
   font-size: 1.2rem;
-  color: #4481eb;
+  /*color: #4481eb;*/
+  color:black;
 }
 
 .forms-container {
@@ -61,12 +62,20 @@ form.sign-up-form {
   opacity: 0;
   z-index: 1;
 }
-/*Eliminar prueba*/
+
+/*Inicio del formulario historia*/
 form.claseHistoria {
   opacity: 0;
   z-index: 1;
 }
-/*Eliminar fin de prueba*/
+/*Fin del formulario Historia*/
+
+/*Inicio del formulario Uso*/
+form.claseUso {
+  opacity: 0;
+  z-index: 1;
+}
+/*Fin del formulario Uso*/
 
 form.sign-in-form {
   z-index: 2;
@@ -236,7 +245,7 @@ form.sign-in-form {
   margin: 0;
   background: none;
   border: 2px solid #fff;
-  width: 130px;
+  width: 160px;
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
@@ -247,12 +256,19 @@ form.sign-in-form {
   transform: translateX(800px);
 }
 
-/*elkminar inicia prueba*/
+/*Inicio de Historia*/
 .historia-panel .image,
 .historia-panel .content {
   transform: translateX(800px);
 }
-/*Eliminar fin de prueba*/
+/*Fín de Historia*/
+
+/*Inicio de Uso*/
+.uso-panel .image,
+.uso-panel .content {
+  transform: translateX(800px);
+}
+/*Fín de Uso*/
 
 /* ANIMATION */
 
@@ -293,7 +309,7 @@ form.sign-in-form {
   pointer-events: all;
 }
 
-/*Eliminar Se agrega de prueba */
+/*Se agrega la animacion de la historia */
 .container.sign-on-mode:before {
   transform: translate(100%, -10%);
   right: 52%;
@@ -330,7 +346,7 @@ form.sign-in-form {
 
 .container.sign-on-mode .historia-panel .image,
 .container.sign-on-mode .historia-panel .content {
-  transform: translate(180%, -50%);
+  transform: translate(180%, -80%);
 }
 
 .container.sign-on-mode .signin-signup .sign-in-form {
@@ -344,7 +360,57 @@ form.sign-in-form {
 .container.sign-on-mode .right-panel {
   pointer-events: all;
 }
-/*Eliminar fin de prueba*/
+/*Fin de la animación de la historia*/
+
+/*Inicio de Como Funciona*/
+.container.sign-down-mode:before {
+  transform: rotate(180deg);
+}
+
+.container.sign-down-mode .left-panel .image,
+.container.sign-down-mode .left-panel .content {
+  transform: translate(0px, -800px);
+}
+
+.container.sign-down-mode .signin-signup .sign-in-form {
+  transform: translate(0px, 800px);
+}
+
+.container.sign-down-mode .uso-panel .image,
+.container.sign-down-mode .uso-panel .content {
+  transform: translate(-550px, -60px);
+}
+
+.container.sign-down-mode form.claseUso {
+  opacity: 1;
+  z-index: 2;
+}
+
+/*
+.container.sign-down-mode .right-panel .image,
+.container.sign-down-mode .right-panel .content {
+  transform: translate(0px, -800px);
+}
+
+
+*/
+/*
+.container.sign-down-mode .signin-signup {
+  left: 25%;
+}
+
+.container.sign-down-mode form.sign-up-form {
+  opacity: 0;
+  z-index: 2;
+}
+
+.container.sign-down-mode form.sign-in-form {
+  opacity: 0;
+  z-index: 1;
+}
+*/
+
+/*fin de como funciona*/
 @media (max-width: 870px) {
   .container {
     min-height: 800px;
